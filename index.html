@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container-lg">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"
+            ><div class="dropdown">
+              <img src="./src/img/favorites.png" alt="favorites" width="30px" />
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Favorites
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Madrid</a></li>
+                <li><a class="dropdown-item" href="#">Orlando</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Paris</a>
+                </li>
+              </ul>
+            </div></a
+          >
+          <div class="current">
+            <p class="h4" id="current-city">Los Angeles</p>
+            <img
+              class="img_sun"
+              src="./src/img/sun.png"
+              alt="sun"
+              width="20px"
+              height="20px"
+            />
+          </div>
+
+          <form class="d-flex" role="search" id="city-search">
+            <input id="city-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            <button class="btn current_btn">Current</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="row align-items-start ">
+        <div class="col display-1 border-end border-5 cloudy">
+         <p id="deg">20</p>
+          <a class="degree" id="degree-celsius" href="#">C &#176</a>
+          <a class="degree" id="degree-farenheit" href="#">F &#176</a>
+        </div>
+        <div class="col">
+          <p>Cloudy</p>
+          <p id="current-time">Tuesday, 21 July</p>
+        </div>
+      </div>
+
+
+      <img src="./src/img/sun_cloud.gif" alt="sun_cloud">
+      <div class="border border-3 rounded border-secondary w-25 p-3 " >
+        <div class="d-flex info">
+          <img src="./src/img/wind.png" alt="wind" height="100%" >
+          <p>Wind</p>
+          <p>4km/h</p>
+        </div>
+        <div class="d-flex info">
+          <img src="./src/img/sum.png" alt="sum" width="16px" height="16px">
+          <p>Sum</p>
+          <p>70%</p>
+        </div>
+      </div>
+
+
+      <div class="d-flex justify-content-evenly m-5 fs-3">
+        <div>
+          <p>Now</p>
+          <img class="img_siz" src="./src/img/sun_cloud.gif" alt="sun_cloud">
+          <p>20 &#176</p>
+        </div>
+        <div>
+          <p>Mon</p>
+          <img class="img_siz" src="./src/img/sun_gif.gif" alt="sun">
+          <p>24 &#176</p>
+        </div>
+        <div>
+          <p>Tue</p>
+          <img class="img_siz clo" src="./src/img/sun_cloud.gif" alt="sun_cloud">
+          <p>26 &#176</p>
+        </div>
+        <div>
+          <p>Wed</p>
+          <img class="img_siz" src="./src/img/rain.gif" alt="rain">
+          <p>27 &#176</p>
+        </div>
+        <div>
+          <p>Fri</p>
+          <img class="img_siz" src="./src/img/rain.gif" alt="rain">
+          <p> 22 &#176</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

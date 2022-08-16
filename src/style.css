@@ -1,0 +1,38 @@
+.current {
+  display: flex;
+}
+.img_sun {
+  margin-top: 3%;
+}
+.container {
+  margin: 0 !important;
+  padding: 0;
+  width: 100%;
+  margin-right: 0;
+}
+body {
+  width: 100%;
+}
+.cloudy {
+  text-align: end;
+}
+.info {
+  justify-content: center;
+}
+.img_siz {
+  width: 40%;
+  height: 40%;
+}
+.degree {
+  font-size: 24px;
+}
+.deg {
+  display: flex;
+  position: relative;
+  left: 80%;
+}
+.current_btn {
+  background-color: rgb(96, 152, 222);
+  color: white;
+  margin-left: 10px;
+}
