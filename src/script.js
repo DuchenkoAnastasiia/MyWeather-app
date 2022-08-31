@@ -81,6 +81,9 @@ let iconElement = document.querySelector("#icon");
 let weatherDescription = document.querySelector("#weather_description");
 let humidityCurrent = document.querySelector("#humidity_cur");
 let wind = document.querySelector("#wind");
+let celsius = document.querySelector("#degree-celsius");
+let farenheit = document.querySelector("#degree-farenheit");
+let degree = document.querySelector("#deg");
 
 function showCity(event) {
   event.preventDefault();
@@ -89,6 +92,21 @@ function showCity(event) {
 
   function getTemp(response) {
     let temp = Math.round(response.data.main.temp);
+
+    function calcFarenheit(event) {
+      event.preventDefault();
+      let farenheitTempreture = `${(temp * 9) / 5 + 32}`;
+      deg.innerHTML = Math.round(farenheitTempreture);
+    }
+    farenheit.addEventListener("click", calcFarenheit);
+
+    function calcCelsius(event) {
+      event.preventDefault();
+      deg.innerHTML = `${Math.round(temp)}`;
+      celsius.classList.remove("active");
+    }
+    celsius.addEventListener("click", calcCelsius);
+
     currentCity.innerHTML = `${response.data.name}`;
     degree.innerHTML = `${temp}`;
     weatherDescription.innerHTML = `${response.data.weather[0].description}`;
@@ -114,19 +132,3 @@ searchCity.addEventListener("submit", showCity);
 // }
 // navigator.geolocation.getCurrentPosition(showPosition);
 // currentButton.addEventListener("click", showCurrentTempreture);
-
-let celsius = document.querySelector("#degree-celsius");
-let farenheit = document.querySelector("#degree-farenheit");
-let degree = document.querySelector("#deg");
-let num = Number(degree.innerHTML);
-
-function calcFarenheit(event) {
-  event.preventDefault();
-  degree.innerHTML = `${num * (9 / 5) + 32}`;
-}
-farenheit.addEventListener("click", calcFarenheit);
-
-function calcCelsius() {
-  degree.innerHTML = `${num - 32 * (5 / 9)}`;
-}
-celsius.addEventListener("click", calcCelsius);

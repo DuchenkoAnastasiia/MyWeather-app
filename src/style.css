@@ -54,3 +54,10 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
+.weather-tempreture .active {
+  color: black;
+  cursor: default;
+}
