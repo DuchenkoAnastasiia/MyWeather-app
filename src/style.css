@@ -42,3 +42,15 @@ body {
   margin: 3%;
   padding: 2%;
 }
+.hourly {
+  display: block;
+  margin: 0 auto;
+}
+.hourly_in {
+  text-align: center;
+}
+.weather_extension {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}

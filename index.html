@@ -48,13 +48,13 @@
             >
             <div class="current">
               <p class="h4" id="current-city">Los Angeles</p>
-              <img
+              <!-- <img
                 class="img_sun"
                 src="./src/img/sun.png"
                 alt="sun"
                 width="20px"
                 height="20px"
-              />
+              /> -->
             </div>
   
             <form class="d-flex" role="search" id="city-search">
@@ -80,55 +80,58 @@
             <a class="degree" id="degree-farenheit" href="#">F &#176</a>
           </div>
           <div class="col">
-            <p>Cloudy</p>
+            <p id="weather_description">Cloudy</p>
             <p id="current-time">Tuesday, 21 July</p>
           </div>
         </div>
   
-  
-        <img src="./src/img/sun_cloud.gif" alt="sun_cloud">
-        <div class="border border-3 rounded border-secondary w-25 p-3 " >
-          <div class="d-flex info">
-            <img src="./src/img/wind.png" alt="wind" height="100%" >
-            <p>Wind</p>
-            <p>4km/h</p>
-          </div>
-          <div class="d-flex info">
-            <img src="./src/img/sum.png" alt="sum" width="16px" height="16px">
-            <p>Sum</p>
-            <p>70%</p>
+        <div class="weather_extension">
+          <img id="icon" src="./src/img/sun_cloud.gif" alt="sun_cloud">
+          <div class="border border-3 rounded border-secondary w-35 p-4 " >
+            <div class="d-flex info">
+              <img src="./src/img/wind.png" alt="wind" height="100%" >
+              <p>Wind</p>
+              <p id="wind">4</p>
+              <span>km/h</span>
+            </div>
+            <div class="d-flex info">
+              <img src="./src/img/sum.png" alt="sum" width="16px" height="16px">
+              <p>Sum</p>
+              <p id="humidity_cur">70</p>
+              <span>%</span>
+            </div>
           </div>
         </div>
   
-  
-        <div class="d-flex justify-content-evenly m-5 fs-3">
-          <div>
+        <!-- <div class="d-flex justify-content-evenly m-5 fs-3 hourly">
+          <div class="hourly_in">
             <p>Now</p>
             <img class="img_siz" src="./src/img/sun_cloud.gif" alt="sun_cloud">
             <p>20 &#176</p>
           </div>
-          <div>
+          <div class="hourly_in">
             <p>Mon</p>
             <img class="img_siz" src="./src/img/sun_gif.gif" alt="sun">
             <p>24 &#176</p>
           </div>
-          <div>
+          <div class="hourly_in">
             <p>Tue</p>
             <img class="img_siz clo" src="./src/img/sun_cloud.gif" alt="sun_cloud">
             <p>26 &#176</p>
           </div>
-          <div>
+          <div class="hourly_in">
             <p>Wed</p>
             <img class="img_siz" src="./src/img/rain.gif" alt="rain">
             <p>27 &#176</p>
           </div>
-          <div>
+          <div class="hourly_in">
             <p>Fri</p>
             <img class="img_siz" src="./src/img/rain.gif" alt="rain">
             <p> 22 &#176</p>
           </div>
         </div>
-      </div>
+      </div> -->
+
       </div>
 
     <script src="./src/script.js"></script>
