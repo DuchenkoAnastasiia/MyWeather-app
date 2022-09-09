@@ -37,15 +37,7 @@ let weather = {
 
 let currentTime = document.querySelector("#current-time");
 let time = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let month = [
   "January",
   "February",
@@ -74,6 +66,27 @@ currentTime.innerHTML = `${days[time.getDay()]}, ${time.getDate()} ${
   month[time.getMonth()]
 }, ${formatDate(time)}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather_forecast");
+  let forecastHTML = `<div class="d-flex justify-content-evenly m-5 fs-3 hourly">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="hourly_in" id="weather_forecast">
+    <p>Mon</p>
+    <img class="img_siz" src="./src/img/sun_cloud.gif" alt="sun_cloud">
+    <div>
+      <span class="weather_forecast_tempreture_max">28º</span>
+      <span class="weather_forecast_tempreture_min">12º</span>
+    </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 let currentCity = document.querySelector("#current-city");
 let searchCity = document.querySelector("#city-search");
 let cityInput = document.querySelector("#city-input");
@@ -121,6 +134,7 @@ function showCity(event) {
 }
 searchCity.addEventListener("submit", showCity);
 
+displayForecast();
 // let currentButton = document.querySelector("current_btn");
 // function showCurrentTempreture(event) {
 //   console.log(event);

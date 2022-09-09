@@ -61,3 +61,10 @@ a {
   color: black;
   cursor: default;
 }
+.weather_forecast_tempreture_max {
+  font-size: 18px;
+}
+.weather_forecast_tempreture_min {
+  font-size: 18px;
+  opacity: 0.5;
+}
